@@ -1,0 +1,5 @@
+grit prueba1.png -mR8 -gt -gB8
+# prueba1.png: imagen del fondo de baldosas generado con Tiled
+# -mR8:		generación del mapa con reducción de baldosas de 8 bpp
+# -gt:		generar píxeles de las baldosas
+# -gB8:		guardar 8 bits por píxel

@@ -1,0 +1,16 @@
+grit soil.png -gb -gzl -gB8 -pn 240
+# soil.png: imagen bitmap del suelo (512x384 píxeles, 8 bpp, 240 colores)
+# -gb:		generar píxeles del bitmap (no baldosas)
+# -gzl:		comprimir los gráficos en formato lz77
+# -gB8:		guardar 8 bits por píxel
+# -pn 240:	generar una paleta de 240 colores
+
+grit laberinto1.png laberinto2.png laberinto3.png -mzl -mR8 -gt -gB8 -gS -fa -olaberintos
+# laberinto?.png:	mapas de baldosas que definen los laberintos (64x48 baldosas, 8 bpp)
+# -mzl:		generar mapas con compresión en formato lz77
+# -mR8:		reducción de baldosas de 8 bpp
+# -gt:		generar píxeles de las baldosas
+# -gB8:		guardar 8 bits por píxel
+# -gS:		compartir el mismo conjunto de baldosas para todos los mapas (13 baldosas)
+# -fa:		añadir toda la información a un único fichero de salida (file append)
+# -olaberintos:	prefijo de ficheros de salida 'laberintos' (.h + .s)

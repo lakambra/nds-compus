@@ -1,0 +1,40 @@
+grit soil.png -gb -gzl -gB8 -pn 240
+# soil.png: imagen bitmap del suelo (512x384 píxeles, 8 bpp, 240 colores)
+# -gb:		generar píxeles del bitmap (no baldosas)
+# -gzl:		comprimir los gráficos en formato lz77
+# -gB8:		guardar 8 bits por píxel
+# -pn 240:	generar una paleta de 240 colores
+
+grit laberinto1.png laberinto2.png laberinto3.png -mzl -mR8 -gt -gB8 -gS -fa -olaberintos
+# laberinto?.png:	mapas de baldosas que definen los laberintos (64x48 baldosas, 8 bpp)
+# -mzl:		generar mapas con compresión en formato lz77
+# -mR8:		reducción de baldosas de 8 bpp
+# -gt:		generar píxeles de las baldosas
+# -gB8:		guardar 8 bits por píxel
+# -gS:		compartir el mismo conjunto de baldosas para todos los mapas (13 baldosas)
+# -fa:		añadir toda la información a un único fichero de salida (file append)
+# -olaberintos:	prefijo de ficheros de salida 'laberintos' (.h + .s)
+
+grit antwalk_48.png -gt -gzl -gB8 -Mh4 -Mw4 -pn 48 -pT 1 -oantwalk
+# antwalk_48.png:	imágenes de las hormigas (384x32 píxeles, 48 colores)
+# -gt:		generar píxeles de las baldosas
+# -gzl:		comprimir los gráficos en formato lz77
+# -gB8:		guardar 8 bits por píxel
+# -Mh4:		considerar metabaldosas de 4 baldosas de alto
+# -Mw4:								por 4 baldosas de ancho
+# -pn 48:	generar una paleta de 48 colores
+# -pT 1:	considerar índice de paleta 1 (magenta) como color transparente
+# -oantwalk:	prefijo de ficheros de salida 'antwalk' (.h + .s)
+
+grit text.png -gt -gB8 -pn 2
+# text.png:	imágenes de las letras (760x8 píxeles, 2 colores)
+# -gt:		generar píxeles de las baldosas
+# -gB8:		guardar 8 bits por píxel
+# -pn 2:	generar una paleta de 2 colores
+
+grit soilmini.png -gb -gzl -gB16 -gT!
+# soilmini.png: imagen bitmap reducida del suelo (128x96 píxeles, 24 bpp)
+# -gb:		generar píxeles del bitmap (no baldosas)
+# -gzl:		comprimir los gráficos en formato lz77
+# -gB16:	guardar 16 bits por píxel
+# -gT!:		activar bit de opacidad (evitar transparencia alfa)
