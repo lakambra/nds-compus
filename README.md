@@ -54,5 +54,3 @@ El repositorio incluye una organización clara de ficheros que manejan la lógic
 El proyecto **CandyNDS** ofrece una experiencia integral de desarrollo para sistemas embebidos, abarcando desde lógica básica hasta gráficos avanzados y animaciones. Está diseñado como un desafío técnico y creativo que maximiza las capacidades de la Nintendo DS.
 
 --- 
-
-¿Así está mejor ajustado? 😊
